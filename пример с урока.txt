@@ -1,0 +1,222 @@
+#region 9урок
+//int x = 5;
+//int y = x / 0;
+//Console.WriteLine($"Результат: {y}");
+//Console.WriteLine("Кінець програми");
+
+//try
+//{
+//    int x = 5;
+//    int y = x / 0;
+//    Console.WriteLine($"Результат: {y}");
+//}
+//catch
+//{
+//    Console.WriteLine("Виникло виключення!");
+//}
+//finally
+//{
+//    Console.WriteLine("Блок finally");
+//}
+//Console.WriteLine("Кiнець програми");
+//Square("ab");
+//void Square(string data)
+//{
+//    int x = int.Parse(data);
+//    Console.WriteLine($"Квадрат числа {x}: {x * x}");
+//}
+//void Square(string data)
+//{
+//    if (int.TryParse(data, out var x))
+//    {
+//        Console.WriteLine($"Квадрат числа {x}: {x * x}");
+//    }
+//    else
+//    {
+//        Console.WriteLine("Некорректный ввод");
+//    }
+//}
+//try
+//{
+//    int x = 5;
+//    int y = x / 0;
+//    Console.WriteLine($"Результат: {y}");
+//}
+//catch (DivideByZeroException ex)
+//{
+//    Console.WriteLine($"Виникло виключення!\n {ex.Message}");
+//}
+//int x = 0;
+//int y = 1;
+//try
+//{
+//    int result1 = x / y;
+//    int result2 = y / x;
+//}
+//catch (DivideByZeroException) when (y == 0)
+//{
+//    Console.WriteLine("y не повинен дорівнювати 0");
+//}
+//catch (DivideByZeroException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+//InnerException: хранит информацию об исключении, которое послужило причиной текущего исключения
+//Message: хранит сообщение об исключении, текст ошибки
+//Source: хранит имя объекта или сборки, которое вызвало исключение
+//StackTrace: возвращает строковое представление стека вызывов, которые привели к возникновению исключения
+//TargetSite: возвращает метод, в котором и было вызвано исключение
+//try
+//{
+//    int x = 5;
+//    int y = x / 0;
+//    Console.WriteLine($"Результат: {y}");
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine($"Исключение: {ex.Message}");
+//    Console.WriteLine($"Метод: {ex.TargetSite}");
+//    Console.WriteLine($"Трассировка стека: {ex.StackTrace}");
+//}
+//DivideByZeroException: представляет исключение, которое генерируется при делении на ноль
+//ArgumentOutOfRangeException: генерируется, если значение аргумента находится вне диапазона допустимых значений
+//ArgumentException: генерируется, если в метод для параметра передается некорректное значение
+//IndexOutOfRangeException: генерируется, если индекс элемента массива или коллекции находится вне диапазона допустимых значений
+//InvalidCastException: генерируется при попытке произвести недопустимые преобразования типов
+//NullReferenceException: генерируется при попытке обращения к объекту, который равен null (то есть по сути неопределен)
+//try
+//{
+//    int[] numbers = new int[4];
+//    numbers[7] = 9;     // IndexOutOfRangeException
+//    int x = 5;
+//    int y = x / 0;  // DivideByZeroException
+//    Console.WriteLine($"Результат: {y}");
+//}
+//catch (DivideByZeroException)
+//{
+//    Console.WriteLine("Возникло исключение DivideByZeroException");
+//}
+//catch (IndexOutOfRangeException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine($"Исключение: {ex.Message}");
+//}
+
+//Console.Read();
+//try
+//{
+//    Console.Write("Введите имя: ");
+//    string? name = Console.ReadLine();
+//    if (name == null || name.Length < 2)
+//    {
+//        throw new Exception("Длина имени меньше 2 символов");
+//    }
+//    else
+//    {
+//        Console.WriteLine($"Ваше имя: {name}");
+//    }
+//}
+//catch (Exception e)
+//{
+//    Console.WriteLine($"Ошибка: {e.Message}");
+//}
+//try
+//{
+//    try
+//    {
+//        Console.Write("Введите имя: ");
+//        string? name = Console.ReadLine();
+//        if (name == null || name.Length < 2)
+//        {
+//            throw new Exception("Длина имени меньше 2 символов");
+//        }
+//        else
+//        {
+//            Console.WriteLine($"Ваше имя: {name}");
+//        }
+//    }
+//    catch (Exception e)
+//    {
+//        Console.WriteLine($"Ошибка: {e.Message}");
+//        throw;
+//    }
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+#endregion
+#region 8lesson
+//FileStream f = new FileStream("d:\\b.txt", FileMode.OpenOrCreate);
+//Console.WriteLine("File opened");
+
+//f.WriteByte(70);
+//Console.WriteLine("Data written into file");
+
+//f.Close();
+//Console.WriteLine("File Stream closed");
+//FileStream f = new FileStream("d:\\b.txt", FileMode.OpenOrCreate);
+
+//Console.WriteLine("File opened");
+
+//char a = (char)f.ReadByte();
+
+//Console.WriteLine("Data read from file is: " + a);
+
+//f.Close();
+
+//Console.WriteLine("File Stream closed");
+
+//Console.ReadLine();
+//FileStream f = new FileStream("d:\\b.txt", FileMode.OpenOrCreate);
+
+//Console.WriteLine("File opened");
+
+////declared stream writer
+//StreamWriter s = new StreamWriter(f);
+
+//Console.WriteLine("Writing data to file");
+
+//s.WriteLine("Writing data into file using stream writer");
+
+////closing stream writer
+//s.Close();
+//f.Close();
+
+//Console.WriteLine("File Stream closed");
+
+//Console.ReadLine();
+//FileStream f = new FileStream("d:\\b.txt", FileMode.OpenOrCreate);
+
+//Console.WriteLine("File opened");
+
+////declared stream reader
+//StreamReader sr = new StreamReader(f);
+//Console.WriteLine("Reading data from the file");
+
+//string line = sr.ReadLine();
+
+//Console.WriteLine("The data from the file is : " + line);
+
+////closing stream writer
+//sr.Close();
+//f.Close();
+
+//Console.WriteLine("File Stream closed");
+
+//Console.ReadLine();
+//string path = "person.dat";
+//// создаем объект BinaryWriter
+//using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
+//{
+//    // записываем в файл строку
+//    writer.Write("Tom");
+//    // записываем в файл число int
+//    writer.Write(37);
+//    Console.WriteLine("File has been written");
+//}
+
+#endregion
